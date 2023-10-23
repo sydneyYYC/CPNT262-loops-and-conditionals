@@ -4,19 +4,14 @@
 
 // have a name in an array with two words
 const jelly = "box jellyfish";
-// split into two words and invoke the function across all words
-const newArr = jelly.split(" ").map(capitalizeFirstLetter);
-const capitalizeJelly = newArr.join(" ");
 
-jelly[0].toUpperCase() + jelly.slice(1);
 
 //call function
 function capitalizeFirstLetter(str) {
   //will map across each and uppercase the first character and add the rest
-  str[0].toUpperCase() + str.slice(1).toLowerCase();
+  //this one does all of the things from attempt 2 but uses word differently and combines them alk into one line of code WOW 
+  return str.split(" ").map((word) =>word[0].toUpperCase() + word.slice(1).join(" "));
 }
-
-
 //execute / invoke function
 capitalizeFirstLetter(jelly);
 
@@ -30,3 +25,12 @@ capitalizeFirstLetter(jelly);
 
 // + newArr[i].substr(1);
 
+//attempt # 2
+
+// jelly = "box jellyfish"
+// split into two words and invoke the function across all words
+// const newArr = jelly.split(" ").map(capitalizeFirstLetter);
+//join words with a space
+// const capitalizeJelly = newArr.join(" ");
+
+// problem 2 
