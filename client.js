@@ -8,15 +8,17 @@ console.log(jelly);
 
 //call function
 function capitalizeFirstLetter(str) {
-  //will map across each and uppercase the first character and add the rest
-  //this one does all of the things from attempt 2 but uses word differently and combines them alk into one line of code WOW 
-  return str.split(" ").map((word) => word[0].toUpperCase() + word.slice(1).join(" "));
+  //will map across each and uppercase the first character and add the rest of the characters
+  let newStr = str.split(" ").map((word) => word[0].toUpperCase() + word.slice(1));
+  // return the capitalized strings and join them with a space
+  return newStr.join(" ");
 }
 //execute / invoke function
 let capitalJelly= capitalizeFirstLetter(jelly);
+
 //render on page
 document.querySelector("#capital-slot").innerHTML = capitalJelly;
-
+//original string for comparison
 document.querySelector("#jelly-spot") .innerHTML = jelly;
 
 
@@ -59,7 +61,11 @@ document.querySelector("#jelly-spot") .innerHTML = jelly;
 
 
 function reverseString(str) {
+  // return a string that '?' if true return '' nothing else reverse string using substring and charAt
   return (str === '') ? '' : reverseString(str.substr(1)) + str.charAt(0);
-  document.querySelector("#reverse-string").innerHTML = this;
 }
-reverseString("hello");
+// invoke function
+let revStr = reverseString("My Life");
+
+// render on page
+document.querySelector("#reverse-string").innerHTML = revStr;
